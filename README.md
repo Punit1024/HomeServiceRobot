@@ -1,2 +1,2 @@
 # HomeServiceRobot
-try scripts under src\script\
+try scripts under `src\script\`
