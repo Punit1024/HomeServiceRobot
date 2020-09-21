@@ -5,5 +5,7 @@ xterm  -e  " source devel/setup.bash; roslaunch rvizConfig view_navigation.launc
 sleep 5 
 xterm  -e  " source devel/setup.bash; roslaunch turtlebot_gazebo amcl.launch" &
 sleep 5
-xterm  -e  " source devel/setup.bash; rosrun pick_objects pick_objects_with_marker"
+xterm  -e  " source devel/setup.bash; rosrun pick_objects pick_objects_with_marker" &
+sleep 1
+xterm  -e  " source devel/setup.bash; rosrun add_markers add_markers" 
 

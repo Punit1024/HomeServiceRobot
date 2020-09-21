@@ -33,7 +33,7 @@ int main(int argc, char** argv){
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal);  // Set our initial shape type to be a cube
-  uint32_t shape = visualization_msgs::Marker::CYLINDER;
+  uint32_t shape = visualization_msgs::Marker::SPHERE;
 
   
     visualization_msgs::Marker marker;
@@ -55,7 +55,7 @@ int main(int argc, char** argv){
     // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
     marker.pose.position.x =  -0.165;
     marker.pose.position.y = 3.505;
-    marker.pose.position.z = 0;
+    marker.pose.position.z = 1;
     marker.pose.orientation.x = 0.0;
     marker.pose.orientation.y = 0.0;
     marker.pose.orientation.z = 0.0;
@@ -67,9 +67,9 @@ int main(int argc, char** argv){
     marker.scale.z = 0.3;
 
     // Set the color -- be sure to set alpha to something non-zero!
-    marker.color.r = 1.0f;
+    marker.color.r = 0.0f;
     marker.color.g = 0.0f;
-    marker.color.b = 0.0f;
+    marker.color.b = 1.0f;
     marker.color.a = 1.0;
 
     marker.lifetime = ros::Duration();
@@ -122,8 +122,7 @@ int main(int argc, char** argv){
     marker.pose.position.y = -4.763;
 
 
-    marker.color.r = 0.0f;
-    marker.color.g = 1.0f;
+
     //marker.lifetime = ros::Duration(5);
     marker_pub.publish(marker); 
     }
